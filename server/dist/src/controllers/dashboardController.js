@@ -32,7 +32,7 @@ const getDashboardData = (req, res) => __awaiter(void 0, void 0, void 0, functio
                 date: "desc",
             },
         });
-        const expanseSummary = yield prisma.expenseSummary.findMany({
+        const expenseSummary = yield prisma.expenseSummary.findMany({
             take: 5,
             orderBy: {
                 date: "desc",
@@ -49,7 +49,7 @@ const getDashboardData = (req, res) => __awaiter(void 0, void 0, void 0, functio
             popularProducts,
             salesSummary,
             purchaseSummary,
-            expanseSummary,
+            expenseSummary,
             expenseByCategorySummary,
         });
     }

@@ -26,7 +26,7 @@ export const getDashboardData = async (req: Request, res: Response) => {
       },
     });
 
-    const expanseSummary = await prisma.expenseSummary.findMany({
+    const expenseSummary = await prisma.expenseSummary.findMany({
       take: 5,
       orderBy: {
         date: "desc",
@@ -53,7 +53,7 @@ export const getDashboardData = async (req: Request, res: Response) => {
       popularProducts,
       salesSummary,
       purchaseSummary,
-      expanseSummary,
+      expenseSummary,
       expenseByCategorySummary,
     });
   } catch (error) {
